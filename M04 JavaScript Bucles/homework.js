@@ -216,7 +216,6 @@ function esPrimo(num) {
    }
 
    return true;
-
 }
 
 function esVerdadero(valor) {
