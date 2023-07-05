@@ -187,7 +187,11 @@ function todosIguales(array) {
   // Caso contrario retornar false.
   // Tu código:
 
-  
+  var todosIguales = array.every((elemento) => {
+    return elemento === array[0];
+  });
+
+  return todosIguales;
 }
 
 function mesesDelAño(array) {
@@ -195,18 +199,60 @@ function mesesDelAño(array) {
   // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
   // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
   // Tu código:
+
+  var estanLosMeses =
+    array.includes("Enero") &&
+    array.includes("Marzo") &&
+    array.includes("Noviembre");
+
+  if (!estanLosMeses) {
+    return "No se encontraron los meses pedidos";
+  }
+
+  var nuevoArreglo = [];
+
+  for (var i = 0; i < array.length; i++) {
+    if (
+      array[i] === "Enero" ||
+      array[i] === "Marzo" ||
+      array[i] === "Noviembre"
+    ) {
+      nuevoArreglo.push(array[i]);
+    }
+  }
+
+  return nuevoArreglo;
 }
 
 function tablaDelSeis() {
   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
+
+  var resultados = [];
+
+  for (var i = 0; i <= 10; i++) {
+    var resultado = 6 * i;
+    resultados.push(resultado);
+  }
+
+  return resultados;
 }
 
 function mayorACien(array) {
   // La función recibe un arreglo con enteros entre 0 y 200.
   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
   // Tu código:
+
+  var mayoresCien = [];
+
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      mayoresCien.push(array[i]);
+    }
+  }
+
+  return mayoresCien;
 }
 
 /* ----------------------------------------------------------------------------------
